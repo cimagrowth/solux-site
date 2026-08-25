@@ -1,0 +1,10 @@
+{
+  "name": "solux-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Marketing site for Solux — the fertility clinic operating system",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve . -l 3000"
+  }
+}
