@@ -449,18 +449,8 @@ strong { font-weight: 650; color: var(--ink); }
 
 /* ---------- third-party form embed ---------- */
 
-.embed { background: var(--surface); border: 1px solid var(--rule); min-height: 460px; }
+.embed { background: var(--surface); border: 1px solid var(--rule); }
 .embed iframe { display: block; width: 100%; border: 0; }
-.embed__placeholder {
-  padding: 46px 28px;
-  text-align: center;
-  color: var(--ink-mute);
-  border: 1px dashed var(--rule-firm);
-  margin: 14px;
-}
-.embed__placeholder .mono { color: var(--brand); margin-bottom: 10px; }
-.embed__placeholder p { font-size: 0.95rem; }
-.embed__placeholder code { font-family: var(--f-mono); font-size: 0.85em; color: var(--ink); }
 
 /* ---------- steps ---------- */
 
