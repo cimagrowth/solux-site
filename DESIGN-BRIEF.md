@@ -1,126 +1,129 @@
 # Design brief — Solux marketing site
 
-Attached: `index.html`, `features.html`, `contact.html`, `assets/styles.css`, `assets/site.js`, `api/contact.js`, `vercel.json`.
-
-Take this from "good" to "the best-looking product site in fertility tech." The content and positioning are settled and validated — **your job is craft, not rewriting.** Treat the copy as fixed unless a line is actively hurting the design.
+This reflects the current direction after the teardown rewrite. It supersedes the
+original "craft, not rewriting / do not reorder" brief — the site was reordered,
+rewritten, translated, and repositioned on purpose.
 
 ---
 
 ## 1. What this is
 
-Solux is a fertility clinic operating system — patient funnel, clinical chart, embryology lab and billing ledger held in **one database**, on a private per-clinic instance. It is the productised version of a system already running a live fertility clinic.
+Solux is **the fertility platform built inside a working clinic** — lead capture to live
+birth, with the clinic, the laboratory and the patient held in **one database**, on a
+private per-clinic instance. It is the productised form of a system already running a
+real fertility practice (real patients, real cycles, real embryology).
 
-**Audience:** owners, medical directors (REIs), lab directors and finance leads at self-pay fertility clinics. Latin America first, US insurance markets next. These are sophisticated, skeptical, expensive-software-buying people who have all been burned by a previous system. Average deal is a five-figure-plus annual commitment plus an implementation. **They will read the whole page.** This is not a consumer landing page and it should not be designed like one.
+**Headline promise:** *the fertility EHR with the lab, the funnel and the ledger already
+inside it.*
 
-**The page's single job:** book a 45-minute demo. Every design decision serves that.
+**Audience:** owners, medical directors (REIs), lab directors and finance leads at
+fertility clinics. Latin America first (hence the full Spanish site), US insurance
+markets next. Sophisticated, skeptical, expensive-software buyers who have been burned
+before. They read the whole page. The page's single job: **book a 45-minute demo.**
 
-**The core thesis, which the design must dramatise:** everyone in this market shipped a chatbot; Solux built AI *into the data model* — permission-scoped, read-only, fully audited. That difference is invisible in a feature list, so the design has to make it *feel* structural and rigorous.
-
----
-
-## 2. Brand truth (do not invent alternatives)
-
-These come from the live product's `clinic_branding` record and are not negotiable:
-
-| Token | Value | Role |
-|---|---|---|
-| Primary | `#6366F1` | Indigo. The brand. |
-| Accent | `#F5A623` | Amber. CTAs and the trigger/retrieval markers only. |
-
-Everything else in `:root` at the top of `styles.css` (ink, paper, rules, washes) is mine and **is open for you to retune** as long as it stays coherent with those two.
-
-**The logo exists and is final. Do not redesign it.** It's called **Corona** and ships in `assets/brand/`:
-
-- `solux-mark.svg` — the mark, indigo→gold gradient (primary use)
-- `solux-mark-mono-indigo.svg`, `solux-mark-white.svg` — single-colour versions
-- `solux-lockup.svg` / `-dark` / `-mono-indigo` / `-white` — mark plus a **DM Sans** wordmark, for use *outside* this site (the app, decks, documents)
-- `icon-16/32/180/192/512.png` — favicon, Apple touch, PWA
-- `og-image.png` — 1200×630, already wired into all three pages
-
-It's real vector geometry: a variable-weight ring where the stroke thickens where light falls and thins into shadow, running deep indigo → indigo → warm gold, with a small core. *Sol* + *lux* — light rimming a sphere. It reads as a cell and as a sunrise, and it holds at 20px.
-
-**One deliberate decision to preserve:** on this site the nav and footer use the *mark* paired with "Solux" set in **Archivo**, the site's own display face — not the DM Sans lockup. The lockup's wordmark clashes with the site typography. Keep the mark + Archivo pairing here; the DM Sans lockup remains correct everywhere else.
-
-The OG image is functional but plain — it's the one brand asset genuinely open to you to improve.
+**The core thesis the design must dramatise:** everyone in this market shipped a chatbot;
+Solux built AI *into the data model* — permission-scoped, read-only, fully audited. And
+the **laboratory is the moat** — most systems stop at the chart.
 
 ---
 
-## 3. The two signature elements — protect and elevate these
+## 2. Positioning guardrails (do not drift)
 
-These are the reason the site isn't generic. Do not delete them. Make them better.
+- **Not "for self-pay clinics."** Self-pay is a billing capability (self-pay **and**
+  insurance), not the market identity. Do not reintroduce it as positioning.
+- **The laboratory is the emphasized differentiator.** Give it its own section and the
+  "why the laboratory is where the risk lives" stat band.
+- **No named clinic.** Do not name the live practice, its city, or any brand
+  (no Pozitivf, Altura, "San Antonio Clinic", etc.).
+- **No invented proof.** No fake logos, testimonials, or Solux usage metrics. Persona
+  outcomes are written as scenarios, not attributed quotes. Leave room above the offer
+  box for a named quote once the first clinic signs.
+- **No PHI, ever.** Product views on the site use synthetic data. Real screenshots must
+  be de-identified before use (see `SCREENSHOT-GUIDE.md`).
+- **No pricing.** The page drives to a call.
 
-**A. The IVF cycle track** (hero, `index.html`). A 34-column CSS grid rendering a real IVF protocol: birth control → stim + monitoring → trigger → retrieval → culture → transfer, with day numbers. The caption is the sales point: *"The AI wrote this cycle. A nurse used to."*
-
-Ideas worth exploring: a page-load draw-in that reads as the calendar being *generated* rather than merely fading in; monitoring-visit pins inside the stim segment; a hover state per phase; a "today" marker. Currently it collapses to colour bars plus a legend under 700px — that's functional but it's the weakest thing on mobile and deserves a proper small-screen design (a vertical timeline is one option).
-
-**B. The AI audit trace** (mid-page, `index.html`, `.audit`). A rendered `ai_query_audit` row: who asked, the plain-language question, the generated SQL, the permission scope, the guardrails, rows returned, duration, where it was logged. This is the single most persuasive object on the site because no competitor can show it.
-
-It currently looks like a static terminal panel. It would be stronger as something that *executes* — question types in, query resolves, row count and duration land, log line writes. Restrained, one pass, no looping. It must respect `prefers-reduced-motion` and it must not look like a fake hacker terminal; the register is **clinical instrumentation and audit ledger**, not sci-fi.
-
----
-
-## 4. Current design system
-
-- **Display:** Archivo variable, using the width axis (`font-variation-settings: "wdth"`) — headlines sit at ~112 width, semibold, tight tracking. Reads like equipment signage.
-- **Body:** Source Serif 4. A serif body under a grotesk display, deliberately inverting the usual pairing — the prose should read like a well-set journal because this is a doctor-facing sale.
-- **Data/labels:** IBM Plex Mono for eyebrows, day numbers, stat labels, the audit ledger.
-- **Structure:** hairline `1px` grids built by giving the container a rule-coloured background and letting `gap: 1px` show through. Near-zero border radius (`2px` max). No drop shadows anywhere.
-- **Motion:** scroll-reveal (`.rv` → `.in` via IntersectionObserver in `site.js`) plus the track's staggered draw-in. That's all.
-
-You may change any of this — including the typefaces — if you can justify something better. If you keep the type pairing, push the type scale and the vertical rhythm harder; that's where the most craft is still on the table.
+The two brand hex values are fixed: indigo `#6366F1`, amber `#F5A623`. Everything else in
+`:root` is tunable as long as it stays coherent.
 
 ---
 
-## 5. Priorities, in order
+## 3. Brand assets
 
-1. **Make the AI section the visual centrepiece.** It's currently the strongest *writing* and only the second-strongest *design*. The thesis band, the versus panel and the audit trace should be the part someone screenshots.
-2. **Show the product.** There are zero product visuals on the site. The most valuable additions would be a Command Center cohort view (a director seeing 60 stimulating patients scored on readiness, not 60 charts) and a cryo-inventory drill-down to tank / canister / cane / straw. These can be designed UI, not screenshots. Nothing may contain real or realistic PHI — invent patient names and never use anything resembling a real chart number.
-3. **Typographic craft.** Section rhythm, scale contrast, optical alignment, the balance of the display face against the serif body.
-4. **Mobile.** Currently correct but plain. The hero, the track and the audit trace all deserve considered small-screen designs, not just reflowed desktop.
-5. **A better OG image.** The current one is functional and plain.
-6. **The nine-surface capability grid** (`.cap`) is nine equal cards — honest but flat. It could carry more hierarchy or a better structural device.
-
----
-
-## 6. Hard constraints
-
-- **Static HTML, CSS and vanilla JS. No build step, no framework, no bundler.** This deploys to Vercel with no build command. If you need a third file of CSS that's fine; do not introduce React, Tailwind, or anything requiring `npm run build`.
-- **No `localStorage` or `sessionStorage`.**
-- Google Fonts are fine; keep the total request weight sane and keep `display=swap`.
-- Relative asset paths (`assets/styles.css`, not `/assets/styles.css`).
-- `api/contact.js` is a working Vercel serverless function that posts to Resend. **Don't break the form contract** — the `<form id="demo-form">` field names (`name`, `role`, `clinic`, `email`, `phone`, `cycles`, `country`, `systems`, `message`, plus the `company` honeypot) must survive, and so must the `#form-status` element.
-- Quality floor, non-negotiable: responsive to 360px, visible keyboard focus, `prefers-reduced-motion` respected throughout, real semantic landmarks, AA contrast.
+The **Corona** mark is final — do not redesign it. On this site the nav/footer pair the
+*mark* with "Solux" set in **Archivo** (the site's display face), not the DM Sans lockup.
+`assets/brand/` holds the mark variants, favicons, apple-touch/PWA icons and
+`og-image.png` (1200×630, wired into every page). The OG image is the one brand asset
+open to improvement.
 
 ---
 
-## 7. Do not change
+## 4. Design system
 
-- **The copy**, except for genuine improvements you can defend. It's built on a validated Hormozi offer structure and the section order is deliberate: dream outcome → AI thesis → proof of the thesis → the problem → role outcomes → the stack → time-to-value → risk reversal → the named offer → the arithmetic → close.
-- **The offer name:** "The 60-Day Cycle Capacity Install."
-- **No pricing anywhere.** The page drives to a call. That's intentional.
-- **No testimonials, customer logos, or usage statistics.** There are none yet and inventing them is off the table. Leave room above the offer box where a named quote will go once the first clinic signs.
-- The two brand hex values in §2.
-
----
-
-## 8. Aesthetic guardrails
-
-Do **not** drift toward any of these, all of which are what an AI designer produces by default:
-
-- Cream background + high-contrast serif display + terracotta accent
-- Near-black background + one acid-green or vermilion accent
-- Generic B2B SaaS: purple-to-blue gradient hero, floating glassmorphic cards, soft shadows, 16px radii, an abstract 3D blob
-- Broadsheet pastiche: hairline rules, zero radius, dense newspaper columns
-
-The register to hit is **clinical instrumentation**: precise, dense where density is earned, generous where it isn't, and confident enough to leave things quiet. Spend the boldness on the two signature elements and keep everything around them disciplined.
+- **Display:** Archivo variable, width axis ~112, semibold, tight tracking — equipment
+  signage.
+- **Body:** Source Serif 4 — a serif body under a grotesk display, deliberate, reads like
+  a well-set journal for a doctor-facing sale.
+- **Data/labels:** IBM Plex Mono — eyebrows, day numbers, stat labels, the audit ledger.
+- **Structure:** hairline `1px` grids (rule-coloured container + `gap: 1px`), near-zero
+  radius (`2px`), no drop shadows — except the product-screenshot frames, which use a
+  soft shadow and 8px radius on purpose to read as a window.
+- **Register:** clinical instrumentation. Dark ground (`#0A0E1F`) is the differentiator —
+  competitors are all light/pastel femtech. Keep it dark.
+- **Motion:** scroll-reveal (`.rv` → `.in`), the cycle-track draw-in, and the audit trace
+  executing one pass. Respect `prefers-reduced-motion` throughout.
 
 ---
 
-## 9. Acceptance checklist
+## 5. Signature + designed elements (protect these)
 
-- [ ] Uses `#6366F1` and `#F5A623` as the brand
-- [ ] Cycle track and audit trace both present and materially better than the versions supplied
-- [ ] At least one designed product view added (Command Center strongly preferred)
-- [ ] Still deploys with no build step; form field names intact
+- **The IVF cycle track** (hero) — a 34-column CSS grid rendering a real protocol,
+  generated from one date. Caption: *"The AI wrote this cycle. A nurse used to."*
+- **The AI audit trace** (`.audit`) — a rendered `ai_query_audit` row that executes on
+  scroll: question, generated SQL, permission scope, guardrails, rows, duration, log
+  line. No competitor can show this. Clinical instrument, not sci-fi terminal.
+- **Command Center cohort** (`.cohort`) — sixty stimulating patients scored on five
+  readiness dimensions, four flagged. Synthetic data.
+- **Cryo drill-down** (`.cryo`) — tank → canister → cane → straw, one straw selected with
+  a synthetic embryo record.
+- **Lab-risk stat band** (`.riskband`) — the sourced industry figures (38% of paid claims
+  begin in the lab, etc.) that make the lab focus land.
+
+---
+
+## 6. Product screenshots
+
+Real screenshots go in `assets/shots/`, framed in browser chrome (`.frame`) on the dark
+ground. Light product UI inside a dark frame is the intended look. Two slots are wired
+(`ai-query.png`, `go-live.png`) with an auto-fallback "awaiting capture" state. Nothing
+may contain real or realistic PHI — invent patient names, never real chart numbers. See
+`SCREENSHOT-GUIDE.md` for the capture list, de-identification rules, and seed patients.
+
+---
+
+## 7. Hard constraints
+
+- **Static HTML, CSS, vanilla JS. No build step, no framework, no bundler.** Deploys to
+  Vercel with no build command.
+- **No `localStorage`/`sessionStorage`.**
+- Relative asset paths (`assets/styles.css`, not `/assets/...`).
+- Google Fonts only, `display=swap`.
+- The contact form is a **GrowthOS iframe embed** posting to `os.cimagrowth.com`; the
+  auto-resize `postMessage` listener at the bottom of `contact.html` must survive.
+- Bilingual: keep `index.html` (EN) and `es.html` (ES) in sync; maintain the nav toggle,
+  `hreflang` tags, and sitemap alternates.
+- US spelling (inquiry, fertilized, authorization, labeling, personalization).
+- Quality floor: responsive to 360px, visible keyboard focus, `prefers-reduced-motion`
+  respected, semantic landmarks, AA contrast.
+
+---
+
+## 8. Acceptance checklist
+
+- [ ] Uses `#6366F1` and `#F5A623` as the brand; dark clinical-instrument register kept
+- [ ] Cycle track, audit trace, cohort and cryo all present and PHI-free
+- [ ] Positioning: platform-built-inside-a-clinic, lab-forward, not self-pay-specific
+- [ ] No named clinic, no invented proof, no PHI
+- [ ] EN and ES in sync; hreflang + sitemap alternates correct
+- [ ] Canonicals/OG point at `www.soluxehr.com`
+- [ ] Still deploys with no build step; GrowthOS form intact
 - [ ] Passes at 360px, keyboard-navigable, reduced-motion respected
-- [ ] Nothing on the page looks like the four defaults in §8
