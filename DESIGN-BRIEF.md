@@ -62,9 +62,14 @@ The two brand hex values are fixed: indigo `#6366F1`, amber `#F5A623`. Everythin
 
 The **Corona** mark is final — do not redesign it. On this site the nav/footer pair the
 *mark* with "Solux" set in **Archivo** (the site's display face), not the DM Sans lockup.
-`assets/brand/` holds the mark variants, favicons, apple-touch/PWA icons and
-`og-image.png` (1200×630, wired into every page). The OG image is the one brand asset
-open to improvement.
+`assets/brand/` holds the mark variants, favicons and apple-touch/PWA icons.
+`assets/brand/og/` holds a **per-page Open Graph image set** (1200×630, one per page,
+each with the page's own eyebrow + headline over the dark ground, the Corona mark, and the
+cycle-track strip). Each page wires its own image via `og:image` / `twitter:image` with an
+`og:image:alt`, and declares `og:locale` (`en_US` / `es_ES`) with the counterpart as
+`og:locale:alternate`. `assets/brand/og-image.png` remains as a legacy default (a copy of
+the home image) for any external cache still pointing at the old path. To regenerate the
+set, re-run the generator that renders the template with Archivo + IBM Plex Mono.
 
 ---
 
