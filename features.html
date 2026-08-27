@@ -7,6 +7,7 @@
 <meta name="description" content="Every module inside Solux: fertility EHR, embryology lab and cryo inventory, patient CRM, billing and revenue cycle, patient portal, AI assistant, lab QC, inventory traceability, workforce compliance and built-in integrations.">
 <link rel="canonical" href="https://www.soluxehr.com/features">
 <link rel="alternate" hreflang="en" href="https://www.soluxehr.com/features">
+<link rel="alternate" hreflang="es" href="https://www.soluxehr.com/es/funciones">
 <link rel="alternate" hreflang="x-default" href="https://www.soluxehr.com/features">
 <meta name="theme-color" content="#0A0E1F">
 <meta property="og:type" content="website">
@@ -25,6 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/styles-v2.css">
 </head>
 <body>
 
@@ -32,11 +34,13 @@
   <div class="nav__in">
     <a class="brand" href="index.html"><img src="assets/brand/solux-mark.svg" alt=""><span class="brand__w">Solux</span></a>
     <div class="nav__links">
+      <a href="capacity.html" class="hide-md">Capacity</a>
+      <a href="lab.html" class="hide-md">For your lab</a>
       <a href="features.html" aria-current="page">Features</a>
       <a href="contact.html" class="hide-sm">Contact</a>
       <span class="lang" role="group" aria-label="Language">
-        <a href="index.html" aria-current="true">EN</a>
-        <a href="es.html">ES</a>
+        <a href="features.html" aria-current="true">EN</a>
+        <a href="funciones.html">ES</a>
       </span>
       <a class="btn btn--sol btn--sm" href="contact.html">Book a demo</a>
     </div>
@@ -47,7 +51,13 @@
   <div class="wrap">
     <p class="eyebrow">Features</p>
     <h1>One record, from first inquiry to frozen straw.</h1>
-    <p class="deck">Everything below is one system with one login. Not a suite. Not modules that sync overnight. The lead, the chart, the embryo and the invoice are the same record, which is why there is nothing to reconcile between them.</p>
+    <p class="deck">Everything below is one system with one login. Not a suite, not modules that sync overnight. The lead, the chart, the embryo and the invoice are the same record — which is why there is nothing to reconcile between them, and why the clerical hours a cycle costs today largely disappear.</p>
+    <div class="subnav" style="margin-top:clamp(24px,3vw,34px)">
+      <a href="capacity.html">The capacity arithmetic</a>
+      <a href="lab.html">For your lab</a>
+      <a href="#ai">The AI layer</a>
+      <a href="contact.html">Book the walkthrough</a>
+    </div>
   </div>
 </header>
 
@@ -77,7 +87,7 @@
       <div class="card">
         <span class="mono">Module 02</span>
         <h3>The IVF cycle calendar</h3>
-        <p>Generated from a single date: birth control, stimulation, monitoring visits, trigger, retrieval, transfer. The patient sees the identical schedule in her portal.</p>
+        <p>Generated from a single date: birth control, stimulation, monitoring visits, trigger, retrieval, transfer. The patient sees the identical schedule in her portal — and the hour a coordinator spent building it, per cycle, is gone.</p>
         <ul>
           <li>Protocol-aware generation, not a blank template</li>
           <li>Pre-flight check that refuses to fail silently when scheduling rules, locations or provider availability are missing</li>
@@ -355,11 +365,11 @@
   <div class="wrap">
     <div class="rv">
       <p class="eyebrow">Next step</p>
-      <h2 style="max-width:20ch">Bring your hardest workflow. We'll start there.</h2>
+      <h2 style="max-width:22ch">Bring your hardest workflow. We'll start there.</h2>
       <p class="deck" style="margin-top:1.3rem">The best first question isn't whether you like the software. It's which part of your current week you'd want running on this first.</p>
       <div class="btn-row">
         <a class="btn btn--sol" href="contact.html">Book a demo →</a>
-        <a class="btn btn--ghost" href="index.html#offer">See the offer</a>
+        <a class="btn btn--ghost" href="capacity.html">Run the capacity numbers</a>
       </div>
     </div>
   </div>
@@ -375,6 +385,8 @@
       <div>
         <h5>Product</h5>
         <ul>
+          <li><a href="capacity.html">Capacity case</a></li>
+          <li><a href="lab.html">For your lab</a></li>
           <li><a href="features.html">Features</a></li>
           <li><a href="features.html#ai">The AI layer</a></li>
           <li><a href="index.html#offer">The offer</a></li>
@@ -385,7 +397,7 @@
         <h5>Company</h5>
         <ul>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="es.html">Español</a></li>
+          <li><a href="funciones.html">Español</a></li>
           <li><a href="https://cimagrowth.com">Cima Growth Solutions</a></li>
         </ul>
       </div>
@@ -395,5 +407,6 @@
 </footer>
 
 <script src="assets/site.js" defer></script>
+<script src="assets/site-v2.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cycle Capacity Without Headcount — The Arithmetic | Solux</title>
+<meta name="description" content="Where a fertility clinic's coordinator hours actually go, which of them one database removes, and what that does to your monthly cycle ceiling. Move the sliders with your own figures.">
+<link rel="canonical" href="https://www.soluxehr.com/capacity">
+<link rel="alternate" hreflang="en" href="https://www.soluxehr.com/capacity">
+<link rel="alternate" hreflang="es" href="https://www.soluxehr.com/es/capacidad">
+<link rel="alternate" hreflang="x-default" href="https://www.soluxehr.com/capacity">
+<meta name="theme-color" content="#0A0E1F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cycle capacity without headcount — the arithmetic">
+<meta property="og:description" content="Where the coordinator hours go, which ones one database removes, and what that does to your cycle ceiling.">
+<meta property="og:url" content="https://www.soluxehr.com/capacity">
+<meta property="og:site_name" content="Solux">
+<meta property="og:image" content="https://www.soluxehr.com/assets/brand/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/solux-mark.svg" type="image/svg+xml">
+<link rel="icon" href="assets/brand/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/brand/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/styles-v2.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__in">
+    <a class="brand" href="index.html"><img src="assets/brand/solux-mark.svg" alt=""><span class="brand__w">Solux</span></a>
+    <div class="nav__links">
+      <a href="capacity.html" class="hide-md" aria-current="page">Capacity</a>
+      <a href="lab.html" class="hide-md">For your lab</a>
+      <a href="features.html">Features</a>
+      <a href="contact.html" class="hide-sm">Contact</a>
+      <span class="lang" role="group" aria-label="Language">
+        <a href="capacity.html" aria-current="true">EN</a>
+        <a href="capacidad.html">ES</a>
+      </span>
+      <a class="btn btn--sol btn--sm" href="contact.html">Book a demo</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding-top:clamp(34px,4vw,56px);padding-bottom:clamp(20px,2.4vw,30px)">
+  <div class="wrap">
+    <p class="eyebrow">The capacity case</p>
+    <h1 style="max-width:19ch">Cycles per coordinator is the only growth number that matters.</h1>
+    <p class="deck" style="max-width:56ch">Every clinic we talk to can fill more cycles than it runs. The constraint is upstream of demand: a fixed number of coordinator hours, most of them spent moving the same facts between systems. This page shows where those hours go, which ones one database removes, and what that does to your ceiling.</p>
+    <div class="subnav" style="margin-top:clamp(26px,3vw,36px)">
+      <a href="#hours">Where the hours go</a>
+      <a href="#calc">Run your numbers</a>
+      <a href="#growth">What growth costs today</a>
+      <a href="#limits">Where this doesn't apply</a>
+      <a href="contact.html">Book the walkthrough</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ WHERE THE HOURS GO ============ -->
+<section class="band band--surface band--edge" id="hours">
+  <div class="wrap">
+    <div class="band__head rv">
+      <p class="eyebrow">Where the hours go</p>
+      <h2>Six hours of clerical work per cycle, and almost none of it is clinical.</h2>
+      <p class="lede">This is the list we build with you on the call, task by task, in your own numbers. The figures below are the pattern we see; yours will differ. What rarely differs is the shape: the work exists because the facts live in more than one place.</p>
+    </div>
+
+    <ol class="stack rv">
+      <li><span class="n">01</span><span class="what">Building the cycle calendar by hand<em>Thirty-four days of protocol assembled in a scheduler, then retyped into an email or a portal message so the patient has a copy.</em></span><span class="alt">Generated from one date</span></li>
+      <li><span class="n">02</span><span class="what">Re-entering the lead into the chart<em>Everything the CRM already knows, typed a second time into the clinical record, because the two systems were never one.</em></span><span class="alt">Same record</span></li>
+      <li><span class="n">03</span><span class="what">Chasing consents and financial clearance<em>Phone calls and a spreadsheet to establish whether a patient who is already stimulating is actually cleared to proceed.</em></span><span class="alt">A readiness score</span></li>
+      <li><span class="n">04</span><span class="what">Keying embryology results out of the lab<em>Grades, PGT and straw locations moved from the lab's own spreadsheet into whatever the clinic reads.</em></span><span class="alt">The lab record is the record</span></li>
+      <li><span class="n">05</span><span class="what">Assembling the day's picture<em>Four systems opened every morning to find out which patients are not tracking, because no single screen knows.</em></span><span class="alt">Command Center</span></li>
+      <li><span class="n">06</span><span class="what">Reconciling the ledger at month end<em>Matching clinical activity against invoices between systems that were never designed to agree.</em></span><span class="alt">One ledger</span></li>
+      <li><span class="n">07</span><span class="what">Answering questions by hand<em>"How many patients are in monitoring?" becomes an export, a pivot table and an afternoon.</em></span><span class="alt">Ask the database</span></li>
+    </ol>
+
+    <p class="closer rv">Every line above is a handoff. <b>Remove the handoff and the hour goes with it.</b></p>
+  </div>
+</section>
+
+<!-- ============ THE BASELINE ============ -->
+<section class="band band--ink">
+  <div class="wrap">
+    <div class="band__head rv">
+      <p class="eyebrow">The industry baseline</p>
+      <h2>This is not a Solux problem or a Solux statistic. It is the state of clinical software.</h2>
+    </div>
+    <div class="hours rv">
+      <p class="hours__n" data-count-to="40" data-count-suffix="%"><small>Of a nurse's shift spent on documentation</small></p>
+      <div class="hours__body">
+        <p>The US Surgeon General's advisory on health worker burnout puts documentation at roughly 40% of a nursing shift. A 2025 national survey of nurses found 92% saying EHR systems had made their job worse, and a third considering leaving their post over it. Fertility is worse than average, not better: the cycle is a 34-day scheduling problem attached to a laboratory record and a self-pay ledger, and most clinics run those on three systems that do not know about each other.</p>
+        <p class="hours__src">Sources: US Surgeon General advisory on health worker burnout, via AACN · Black Book Research national nurse survey, 2025. External industry figures, not Solux measurements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section class="band band--surface band--edge" id="calc">
+  <div class="wrap">
+    <div class="band__head rv">
+      <p class="eyebrow">Run your numbers</p>
+      <h2>Your figures, our model, printed underneath so you can argue with it.</h2>
+      <p class="lede">Set the three inputs to your clinic. The right-hand column is arithmetic, not a forecast — and the assumption doing the work is stated in full below the results.</p>
+    </div>
+
+    <div class="calc rv" data-calc>
+      <div>
+        <p class="calc__label">Your clinic today</p>
+
+        <div class="ctl">
+          <div class="ctl__top">
+            <span class="ctl__name">Cycles per month</span>
+            <span class="ctl__val" data-val="cycles">60</span>
+          </div>
+          <input type="range" name="cycles" min="10" max="200" step="5" value="60" aria-label="Cycles per month">
+          <span class="ctl__note">Fresh and frozen, all cycle types</span>
+        </div>
+
+        <div class="ctl">
+          <div class="ctl__top">
+            <span class="ctl__name">Clerical hours per cycle</span>
+            <span class="ctl__val" data-val="clerical">6.0 h</span>
+          </div>
+          <input type="range" name="clerical" min="2" max="12" step="0.5" value="6" aria-label="Clerical hours per cycle">
+          <span class="ctl__note">The seven lines above, added up</span>
+        </div>
+
+        <div class="ctl" style="margin-bottom:0">
+          <div class="ctl__top">
+            <span class="ctl__name">Revenue per cycle</span>
+            <span class="ctl__val" data-val="price">$18k</span>
+          </div>
+          <input type="range" name="price" min="4000" max="40000" step="1000" value="18000" aria-label="Revenue per cycle">
+          <span class="ctl__note">Your own average, not a market figure</span>
+        </div>
+      </div>
+
+      <div class="calc__out">
+        <p class="calc__label">On the headcount you have today</p>
+        <dl class="calc__result">
+          <div>
+            <dt>Coordinator hours returned per month</dt>
+            <dd class="is-sol" data-out="hours">198</dd>
+          </div>
+          <div>
+            <dt>Cycle headroom, same payroll</dt>
+            <dd data-out="headroom">+33<small>Cycles a month the returned hours can carry before you hire again.</small></dd>
+          </div>
+          <div>
+            <dt>New monthly ceiling</dt>
+            <dd data-out="ceiling">93</dd>
+          </div>
+          <div>
+            <dt>Revenue that headroom represents</dt>
+            <dd data-out="revenue">$594k<small>Per month, at your cycle price, if you fill it.</small></dd>
+          </div>
+        </dl>
+        <p class="calc__foot">Model: one record removes <b>55%</b> of the clerical hours a cycle costs today — the retyping, the hand-built calendar, the consent chase, the month-end reconciliation. Returned hours are then spent on cycles at your own clerical rate. <b>It is a model, not a measurement.</b> The 55% is our estimate from the seven tasks listed above, and we will walk through it line by line rather than ask you to accept it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT GROWTH COSTS ============ -->
+<section class="band band--surface" id="growth">
+  <div class="wrap">
+    <div class="band__head rv">
+      <p class="eyebrow">The two ways to add twenty cycles</p>
+      <h2>One of them shows up in payroll every month for the rest of the clinic's life.</h2>
+    </div>
+
+    <table class="cmp rv">
+      <thead>
+        <tr><th scope="col"></th><th scope="col">Add twenty cycles by hiring</th><th scope="col">Add twenty cycles on Solux</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">What you buy</th>
+          <td class="col-them">Another coordinator, recruited, onboarded, trained on five systems</td>
+          <td class="col-us">Hours already on payroll, returned by removing the handoffs</td>
+        </tr>
+        <tr>
+          <th scope="row">Time to effect</th>
+          <td class="col-them">Two to four months to hire and reach competence</td>
+          <td class="col-us">Sixty days to go-live, then immediate</td>
+        </tr>
+        <tr>
+          <th scope="row">Cost shape</th>
+          <td class="col-them">Recurring salary, benefits and management overhead, permanently</td>
+          <td class="col-us">One platform, replacing several licenses you already pay for</td>
+        </tr>
+        <tr>
+          <th scope="row">Error rate as volume rises</th>
+          <td class="col-them">More people retyping the same facts in more places</td>
+          <td class="col-us">Nothing is retyped, so volume adds no new places to be wrong</td>
+        </tr>
+        <tr>
+          <th scope="row">What happens at the next twenty</th>
+          <td class="col-them">You do it again</td>
+          <td class="col-us">You look at the readiness board and see whether there is room</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="closer rv">Hiring buys throughput once. <b>Removing the handoff buys it every month.</b></p>
+  </div>
+</section>
+
+<!-- ============ HONEST LIMITS ============ -->
+<section class="band band--edge" id="limits">
+  <div class="wrap">
+    <div class="band__head rv">
+      <p class="eyebrow">Where this doesn't apply</p>
+      <h2>The claim has edges. Here they are, before you find them yourself.</h2>
+      <p class="lede">A capacity argument that works in every clinic is a capacity argument nobody should believe.</p>
+    </div>
+
+    <div class="grid grid--3 rv">
+      <div class="card">
+        <span class="mono">Limit 01</span>
+        <h3>Your ceiling might be physical</h3>
+        <p>If you are out of retrieval slots, embryologists or incubator space, software does not create capacity. Solux tells you that faster; it doesn't fix it. On the call we look at which constraint binds first.</p>
+      </div>
+      <div class="card">
+        <span class="mono">Limit 02</span>
+        <h3>Under about thirty cycles a month</h3>
+        <p>The returned hours are real but the arithmetic gets thinner, and one coordinator who knows every patient is genuinely efficient. We will say so rather than sell you the install.</p>
+      </div>
+      <div class="card">
+        <span class="mono">Limit 03</span>
+        <h3>Recovered hours have to be spent</h3>
+        <p>Hours returned are not cycles until someone books them. The clinics that get the whole number back are the ones whose funnel already has more demand than capacity.</p>
+      </div>
+      <div class="card">
+        <span class="mono">Limit 04</span>
+        <h3>Sixty days is work, not magic</h3>
+        <p>Your prices, protocols, consents and staff have to be typed in. We run it against a 40-item checklist, but your team is in the room for part of it.</p>
+      </div>
+      <div class="card">
+        <span class="mono">Limit 05</span>
+        <h3>The 55% is an estimate</h3>
+        <p>It comes from the seven tasks on this page, not from a study of your clinic. We will rebuild it with you, and if the honest number is lower, the honest number is what we use.</p>
+      </div>
+      <div class="card">
+        <span class="mono">Limit 06</span>
+        <h3>We have no clinic to name yet</h3>
+        <p>Solux runs a working fertility practice, and we will show you it live. What we will not do is invent a case study, a logo wall or a testimonial to close you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="band band--ink">
+  <div class="wrap">
+    <div class="tick-rule rv" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="hot"></i><i></i>
+      <i class="hot"></i><i></i><i></i><i></i><i></i><i></i><i class="hot"></i><i></i>
+    </div>
+    <div class="rv">
+      <p class="eyebrow">Next step</p>
+      <h2 style="max-width:24ch">Bring your cycle volume and your payroll. We'll build this list with you.</h2>
+      <p class="deck" style="margin-top:1.3rem">Forty-five minutes, your numbers first, and a straight answer at the end — including the answer where the arithmetic doesn't clear and you shouldn't buy it.</p>
+      <div class="btn-row">
+        <a class="btn btn--sol" href="contact.html">Book the walkthrough →</a>
+        <a class="btn btn--ghost" href="index.html#offer">See the offer</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/brand/solux-mark.svg" alt=""><span class="brand__w">Solux</span></a>
+        <p style="max-width:32ch;margin:0">The fertility platform built inside a working clinic. Funnel, chart, embryology lab and ledger as one record — so cycle volume stops costing headcount.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="capacity.html">Capacity case</a></li>
+          <li><a href="lab.html">For your lab</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="index.html#ai">The AI</a></li>
+          <li><a href="index.html#offer">The offer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="contact.html">Book a demo</a></li>
+          <li><a href="capacidad.html">Español</a></li>
+          <li><a href="https://cimagrowth.com">Cima Growth Solutions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bar">© <span data-year></span> Solux — a Cima Growth Solutions platform. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+<script src="assets/site-v2.js" defer></script>
+</body>
+</html>
