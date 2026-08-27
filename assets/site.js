@@ -65,3 +65,17 @@
   }, { threshold: 0.35 });
   io.observe(panel);
 })();
+
+// --- Product screenshot frames: show the "awaiting capture" state until a
+//     real image is dropped in, then swap to it automatically on load. ---
+(function () {
+  "use strict";
+  document.querySelectorAll(".frame__body img").forEach(function (img) {
+    var wait = img.parentElement.querySelector(".frame__await");
+    function fail() { if (wait) wait.hidden = false; img.style.display = "none"; }
+    function ok() { if (wait) wait.hidden = true; img.style.display = "block"; }
+    if (img.complete) { (img.naturalWidth > 0 ? ok : fail)(); }
+    img.addEventListener("load", ok);
+    img.addEventListener("error", fail);
+  });
+})();
