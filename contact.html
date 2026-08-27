@@ -7,6 +7,7 @@
 <meta name="description" content="Book a 45-minute Solux walkthrough. We ask about your cycles, systems and handoffs first, then show only the parts that answer what you told us.">
 <link rel="canonical" href="https://www.soluxehr.com/contact">
 <link rel="alternate" hreflang="en" href="https://www.soluxehr.com/contact">
+<link rel="alternate" hreflang="es" href="https://www.soluxehr.com/es/contacto">
 <link rel="alternate" hreflang="x-default" href="https://www.soluxehr.com/contact">
 <meta name="theme-color" content="#0A0E1F">
 <meta property="og:type" content="website">
@@ -25,6 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/styles-v2.css">
 </head>
 <body>
 
@@ -32,11 +34,13 @@
   <div class="nav__in">
     <a class="brand" href="index.html"><img src="assets/brand/solux-mark.svg" alt=""><span class="brand__w">Solux</span></a>
     <div class="nav__links">
+      <a href="capacity.html" class="hide-md">Capacity</a>
+      <a href="lab.html" class="hide-md">For your lab</a>
       <a href="features.html">Features</a>
       <a href="contact.html" class="hide-sm" aria-current="page">Contact</a>
       <span class="lang" role="group" aria-label="Language">
-        <a href="index.html" aria-current="true">EN</a>
-        <a href="es.html">ES</a>
+        <a href="contact.html" aria-current="true">EN</a>
+        <a href="contacto.html">ES</a>
       </span>
       <a class="btn btn--sol btn--sm" href="#lead-form">Book a demo</a>
     </div>
@@ -47,7 +51,13 @@
   <div class="wrap">
     <p class="eyebrow">Book a demo</p>
     <h1>Forty-five minutes. Your numbers first.</h1>
-    <p class="deck">We don't open with a login screen. We ask what your week actually looks like, then show you only the parts of Solux that answer it. If something doesn't fix a problem you have, we skip it.</p>
+    <p class="deck">We don't open with a login screen. We ask what your week actually looks like, count the clerical hours each cycle costs you, then show only the parts of Solux that remove them. If something doesn't fix a problem you have, we skip it.</p>
+    <div class="subnav" style="margin-top:clamp(24px,3vw,34px)">
+      <a href="capacity.html">The capacity arithmetic</a>
+      <a href="lab.html">For your lab</a>
+      <a href="features.html">All twelve modules</a>
+      <a href="#lead-form">The form</a>
+    </div>
   </div>
 </header>
 
@@ -88,21 +98,22 @@
       <div>
         <p class="eyebrow">What happens on the call</p>
         <ol class="steps" style="margin-bottom:34px">
-          <li><span class="n">01</span><div><h4>Eight questions, no screen share</h4><p>Cycle volume, your systems, where the handoffs break, what your last system change cost you. We write the answers down.</p></div></li>
+          <li><span class="n">01</span><div><h4>Nine questions, no screen share</h4><p>Cycle volume, coordinator headcount, your systems, where the handoffs break, what your last system change cost you. We write the answers down.</p></div></li>
           <li><span class="n">02</span><div><h4>Only the parts that match</h4><p>A physician sees the cohort view and the cycle calendar. A lab director sees chain of custody and cryo. Finance sees the ledger. You get your version, not the generic tour.</p></div></li>
-          <li><span class="n">03</span><div><h4>Your arithmetic, out loud</h4><p>We run the numbers you gave us against what the platform costs. If it doesn't clear on your own figures, we'll say so.</p></div></li>
+          <li><span class="n">03</span><div><h4>Your arithmetic, out loud</h4><p>We rebuild the <a href="capacity.html" style="color:var(--brand);text-decoration:underline">capacity model</a> line by line with your figures — cycles, clerical hours, cycle price — against what the platform costs. If it doesn't clear on your own numbers, we'll say so.</p></div></li>
         </ol>
 
         <p class="eyebrow">What we'll ask</p>
         <ul class="asks">
           <li><span class="n">01</span><span>How many cycles a month are you running today, and where do you need to be in twelve months?</span></li>
-          <li><span class="n">02</span><span>What systems are you running right now, and what does the handoff between them look like?</span></li>
-          <li><span class="n">03</span><span>Walk me through what happens between a lead's first inquiry and their first payment.</span></li>
-          <li><span class="n">04</span><span>How many inquiries do you get a month, and how many become cycles?</span></li>
-          <li><span class="n">05</span><span>Who builds the IVF calendar today, and how does the patient get it?</span></li>
-          <li><span class="n">06</span><span>Where does the embryology record actually live? Not the official answer.</span></li>
-          <li><span class="n">07</span><span>Last time you had an inspection, what did you have to go and assemble?</span></li>
-          <li><span class="n">08</span><span>What did the last system change cost you — in months, and in staff goodwill?</span></li>
+          <li><span class="n">02</span><span>How many coordinators does that volume take, and what would the next twenty cycles cost you in staff?</span></li>
+          <li><span class="n">03</span><span>What systems are you running right now, and what does the handoff between them look like?</span></li>
+          <li><span class="n">04</span><span>Walk me through what happens between a lead's first inquiry and their first payment.</span></li>
+          <li><span class="n">05</span><span>How many inquiries do you get a month, and how many become cycles?</span></li>
+          <li><span class="n">06</span><span>Who builds the IVF calendar today, and how does the patient get it?</span></li>
+          <li><span class="n">07</span><span>Where does the embryology record actually live? Not the official answer.</span></li>
+          <li><span class="n">08</span><span>Last time you had an inspection, what did you have to go and assemble?</span></li>
+          <li><span class="n">09</span><span>What did the last system change cost you — in months, and in staff goodwill?</span></li>
         </ul>
       </div>
 
@@ -139,6 +150,8 @@
       <div>
         <h5>Product</h5>
         <ul>
+          <li><a href="capacity.html">Capacity case</a></li>
+          <li><a href="lab.html">For your lab</a></li>
           <li><a href="features.html">Features</a></li>
           <li><a href="features.html#ai">The AI layer</a></li>
           <li><a href="index.html#offer">The offer</a></li>
@@ -158,6 +171,7 @@
 </footer>
 
 <script src="assets/site.js" defer></script>
+<script src="assets/site-v2.js" defer></script>
 <script>
   // GrowthOS form auto-resize. Only trusts messages from the GrowthOS origin.
   (function () {

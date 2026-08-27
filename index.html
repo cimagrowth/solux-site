@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fertility EHR, Embryology Lab, CRM and Billing in One System | Solux</title>
-<meta name="description" content="Solux runs a fertility clinic on one database: the chart and cycle calendar, the embryology lab and cryo inventory, the patient pipeline, the billing ledger and the patient portal. One login, in English and Spanish. Live in 60 days.">
+<title>Run More IVF Cycles Without Hiring | Fertility EHR, Lab, CRM and Billing in One System | Solux</title>
+<meta name="description" content="Solux is the fertility EHR that lets a clinic double cycle volume on the coordinators it already has. Chart, cycle calendar, embryology lab, patient CRM, billing ledger and portal on one database. Live in 60 days.">
 <link rel="canonical" href="https://www.soluxehr.com/">
 <link rel="alternate" hreflang="en" href="https://www.soluxehr.com/">
 <link rel="alternate" hreflang="es" href="https://www.soluxehr.com/es">
 <link rel="alternate" hreflang="x-default" href="https://www.soluxehr.com/">
 <meta name="theme-color" content="#0A0E1F">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Fertility EHR, embryology lab, CRM and billing in one system">
-<meta property="og:description" content="One database for the chart, the embryology lab, the patient pipeline and the ledger — the only reason its AI can answer anything worth asking, under your staff's own permissions, every query logged.">
+<meta property="og:title" content="Run 120 cycles a month with the team that runs 60">
+<meta property="og:description" content="One database for the chart, the embryology lab, the patient funnel and the ledger — so growth stops costing headcount. Live in 60 days.">
 <meta property="og:url" content="https://www.soluxehr.com/">
 <meta property="og:site_name" content="Solux">
 <meta property="og:image" content="https://www.soluxehr.com/assets/brand/og-image.png">
@@ -26,6 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/styles-v2.css">
 </head>
 <body>
 
@@ -33,6 +34,8 @@
   <div class="nav__in">
     <a class="brand" href="index.html"><img src="assets/brand/solux-mark.svg" alt=""><span class="brand__w">Solux</span></a>
     <div class="nav__links">
+      <a href="capacity.html" class="hide-md">Capacity</a>
+      <a href="lab.html" class="hide-md">For your lab</a>
       <a href="features.html">Features</a>
       <a href="contact.html" class="hide-sm">Contact</a>
       <span class="lang" role="group" aria-label="Language">
@@ -44,55 +47,63 @@
   </div>
 </nav>
 
-<!-- ============ HERO ============ -->
-<header class="hero">
+<!-- ============ HERO — two columns, both above the fold ============ -->
+<header class="hero hero--split">
   <div class="wrap">
-    <p class="eyebrow">Fertility EHR · Embryology lab · Patient CRM · Billing</p>
-    <h1>The fertility EHR with the lab, the funnel and the ledger already inside it.</h1>
-    <p class="deck">Solux runs a fertility clinic on one database: the chart and cycle calendar, the embryology lab and cryo inventory, the patient pipeline, the billing ledger and the patient portal. One login. Nothing to reconcile between systems, because there aren't any. Live in 60 days.</p>
-    <div class="btn-row">
-      <a class="btn btn--sol" href="contact.html">Book a 45-minute walkthrough →</a>
-      <a class="btn btn--ghost" href="#inside">See what's inside</a>
+    <div class="hero__in">
+      <div>
+        <p class="eyebrow">Fertility EHR · Embryology lab · Patient CRM · Billing</p>
+        <h1>Run 120 cycles a month with the team that runs 60.</h1>
+        <p class="deck">Your ceiling isn't demand. It's the clerical work between five systems — retyping, rebuilding calendars, chasing consents. Solux puts the chart, the lab, the funnel and the ledger on one database, so volume stops costing headcount.</p>
+        <div class="btn-row">
+          <a class="btn btn--sol" href="contact.html">Book a 45-minute walkthrough →</a>
+          <a class="btn btn--ghost" href="#capacity">Run your numbers</a>
+        </div>
+        <div class="hero__figure">
+          <b>2×</b>
+          <span>The volume target on today's payroll — the arithmetic is on this page, with your figures</span>
+        </div>
+        <p class="hero__micro">Running a live fertility practice today. <b>English and Spanish, day one.</b></p>
+      </div>
+
+      <!-- SIGNATURE 1: the cycle track -->
+      <figure class="track">
+        <div class="track__top">
+          <span class="track__title">IVF cycle · generated from one date</span>
+          <span class="track__meta">Day 1 → Day 34</span>
+        </div>
+
+        <div class="track__grid" role="img" aria-label="A 34-day IVF cycle: birth control days 1 to 14, stimulation and monitoring days 15 to 24, trigger day 25, retrieval day 27, fertilization and culture days 29 to 32, transfer day 33.">
+          <div class="seg seg--bc"   style="grid-column: 1 / span 14">Birth control</div>
+          <div class="seg seg--stim" style="grid-column: 15 / span 10">Stim + monitoring</div>
+          <div class="seg seg--trig seg--c" style="grid-column: 25 / span 2">TRG</div>
+          <div class="seg seg--opu seg--c"  style="grid-column: 27 / span 2">OPU</div>
+          <div class="seg seg--lab seg--c"  style="grid-column: 29 / span 4">Culture</div>
+          <div class="seg seg--et seg--c"   style="grid-column: 33 / span 2">ET</div>
+        </div>
+
+        <div class="track__days" aria-hidden="true">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+          <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+          <span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+          <span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span>
+          <span>29</span><span>30</span><span>31</span><span>32</span><span>33</span><span>34</span>
+        </div>
+
+        <div class="legend" aria-hidden="true">
+          <span><i style="background:var(--brand-wash)"></i>Birth control</span>
+          <span><i style="background:var(--brand)"></i>Stim + monitoring</span>
+          <span><i style="background:var(--sol)"></i>Trigger</span>
+          <span><i style="background:var(--ink)"></i>Retrieval</span>
+          <span><i style="background:var(--sol-wash)"></i>Fert + culture</span>
+          <span><i style="background:var(--brand-lift)"></i>Transfer</span>
+        </div>
+
+        <figcaption class="track__foot">
+          <p class="track__note"><strong>The AI wrote this cycle. A nurse used to.</strong> Thirty-four days of protocol from one date, and the patient reads the identical schedule in her portal. That is one coordinator hour back, per cycle, before anything else changes.</p>
+        </figcaption>
+      </figure>
     </div>
-    <p class="hero__micro">Running a live fertility practice today. <b>English and Spanish, day one.</b></p>
-
-    <!-- SIGNATURE 1: the cycle track — the generated cycle calendar, live -->
-    <figure class="track">
-      <div class="track__top">
-        <span class="track__title">IVF cycle · generated from one date</span>
-        <span class="track__meta">Day 1 → Day 34</span>
-      </div>
-
-      <div class="track__grid" role="img" aria-label="A 34-day IVF cycle: birth control days 1 to 14, stimulation and monitoring days 15 to 24, trigger day 25, retrieval day 27, fertilization and culture days 29 to 32, transfer day 33.">
-        <div class="seg seg--bc"   style="grid-column: 1 / span 14">Birth control</div>
-        <div class="seg seg--stim" style="grid-column: 15 / span 10">Stim + monitoring</div>
-        <div class="seg seg--trig seg--c" style="grid-column: 25 / span 2">TRG</div>
-        <div class="seg seg--opu seg--c"  style="grid-column: 27 / span 2">OPU</div>
-        <div class="seg seg--lab seg--c"  style="grid-column: 29 / span 4">Culture</div>
-        <div class="seg seg--et seg--c"   style="grid-column: 33 / span 2">ET</div>
-      </div>
-
-      <div class="track__days" aria-hidden="true">
-        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
-        <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
-        <span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
-        <span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span>
-        <span>29</span><span>30</span><span>31</span><span>32</span><span>33</span><span>34</span>
-      </div>
-
-      <div class="legend" aria-hidden="true">
-        <span><i style="background:var(--brand-wash)"></i>Birth control</span>
-        <span><i style="background:var(--brand)"></i>Stim + monitoring</span>
-        <span><i style="background:var(--sol)"></i>Trigger</span>
-        <span><i style="background:var(--ink)"></i>Retrieval</span>
-        <span><i style="background:var(--sol-wash)"></i>Fert + culture</span>
-        <span><i style="background:var(--brand-lift)"></i>Transfer</span>
-      </div>
-
-      <figcaption class="track__foot">
-        <p class="track__note"><strong>The AI wrote this cycle. A nurse used to.</strong> Protocol-aware, generated from one date, and the patient reads the identical schedule in her portal. It refuses to generate rather than build a calendar on a missing scheduling rule.</p>
-      </figcaption>
-    </figure>
   </div>
 </header>
 
@@ -101,16 +112,16 @@
   <div class="wrap">
     <dl class="trust rv">
       <div>
+        <dt>What it replaces</dt>
+        <dd>Five systems, one record<small>EHR, lab system, CRM, billing and portal as one database.</small></dd>
+      </div>
+      <div>
         <dt>Live deployment</dt>
         <dd>A working fertility practice<small>Real patients, real cycles, real embryology. Not a sandbox.</small></dd>
       </div>
       <div>
-        <dt>Instance model</dt>
-        <dd>Your own database<small>Separate storage and domain. Not a shared table.</small></dd>
-      </div>
-      <div>
-        <dt>Languages</dt>
-        <dd>English + Spanish<small>Every screen, the portal and the AI.</small></dd>
+        <dt>Time to value</dt>
+        <dd>Live in 60 days<small>Nothing left to build. Configuration against a 40-item checklist.</small></dd>
       </div>
       <div class="trust--accent">
         <dt>Go-live guarantee</dt>
@@ -120,13 +131,168 @@
   </div>
 </section>
 
+<!-- ============ THE GAP — the handoffs ============ -->
+<section class="band band--surface band--edge" id="gap">
+  <div class="wrap">
+    <div class="band__head rv">
+      <p class="eyebrow">Where the ceiling comes from</p>
+      <h2>Cycles aren't lost because someone is bad at their job. They're lost in the handoffs.</h2>
+      <p class="lede">Every handoff between systems is a human retyping something while already behind. Add volume and you don't add cycles, you add handoffs — which is why the next twenty cycles a month always seem to need another coordinator.</p>
+    </div>
+
+    <div class="grid grid--4 rv">
+      <div class="card">
+        <span class="mono">Seam 01</span>
+        <h3>Lead → chart</h3>
+        <p>Your CRM knows she inquired. Your EHR knows she exists. Neither knows she went quiet nine days ago and is about to book somewhere else.</p>
+      </div>
+      <div class="card">
+        <span class="mono">Seam 02</span>
+        <h3>Chart → lab</h3>
+        <p>The clinical record says retrieval happened. The embryology record — the one that actually matters in five years — lives in a spreadsheet on someone's desktop.</p>
+      </div>
+      <div class="card">
+        <span class="mono">Seam 03</span>
+        <h3>Nurse → patient</h3>
+        <p>The cycle calendar is built by hand, then retyped into an email. Two versions of the truth, and the patient is holding one of them.</p>
+      </div>
+      <div class="card">
+        <span class="mono">Seam 04</span>
+        <h3>Clinic → ledger</h3>
+        <p>Month end becomes a reconciliation between systems that were never meant to agree, run by the person you can least afford to lose.</p>
+      </div>
+    </div>
+
+    <!-- NEW: the collapse — five systems into one record -->
+    <div class="collapse rv" style="margin-top:clamp(34px,4.5vw,54px)">
+      <div class="collapse__col">
+        <p class="collapse__cap">What a clinic buys today</p>
+        <div class="sysbox">Fertility EHR <em>License</em></div>
+        <div class="seam">Retyped here</div>
+        <div class="sysbox">Embryology lab system <em>Standalone</em></div>
+        <div class="seam">Retyped here</div>
+        <div class="sysbox">CRM and funnel <em>+ integration build</em></div>
+        <div class="seam">Retyped here</div>
+        <div class="sysbox">Billing and revenue cycle <em>PM / RCM</em></div>
+        <div class="seam">Retyped here</div>
+        <div class="sysbox">Patient portal <em>Add-on</em></div>
+      </div>
+
+      <div class="collapse__arrow" aria-hidden="true">→</div>
+
+      <div>
+        <p class="collapse__cap">What Solux is: <b>one database</b></p>
+        <div class="onerecord">
+          <h3>The lead, the chart, the embryo and the invoice are the same record.</h3>
+          <p>There are no integration fees between the parts, because there are no parts. Nothing syncs overnight. Nothing disagrees at month end.</p>
+          <ul>
+            <li>One login, one record, one audit chain</li>
+            <li>Four handoffs removed, not automated</li>
+            <li>Every module on from day one</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE HOURS ============ -->
+<section class="band band--ink">
+  <div class="wrap">
+    <div class="band__head rv">
+      <p class="eyebrow">What the clerical work costs</p>
+      <h2>A coordinator's day is mostly typing. That is the constraint on your cycle volume.</h2>
+      <p class="lede">Nobody is short of demand. What runs out is coordinator hours — and most of those hours are not clinical. They go into the same facts, entered again, in a second system.</p>
+    </div>
+
+    <div class="hours rv">
+      <p class="hours__n" data-count-to="40" data-count-suffix="%"><small>Of a nurse's shift spent on documentation</small></p>
+      <div class="hours__body">
+        <p>That is the industry baseline, not a Solux figure. Nurses spend about 40% of a shift on documentation tasks, and in a 2025 national survey 92% said EHR systems had made their job worse. In a fertility clinic that work is concentrated in exactly the places Solux removes: rebuilding a cycle calendar by hand, retyping a lead into the chart, keying an embryology result into a spreadsheet, reconciling the ledger against the clinical record.</p>
+        <p class="hours__src">Sources: US Surgeon General advisory on health worker burnout, via AACN · Black Book Research national nurse survey, 2025. External industry figures, not Solux measurements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE CALCULATOR ============ -->
+<section class="band band--surface band--edge" id="capacity">
+  <div class="wrap">
+    <div class="band__head rv">
+      <p class="eyebrow">The arithmetic</p>
+      <h2>Move the sliders. This is the conversation we'd have on the call anyway.</h2>
+      <p class="lede">Three numbers you already know: cycles a month, the clerical hours each cycle costs you today, and what a cycle is worth. Everything on the right is derived, and the model behind it is printed underneath — no black box.</p>
+    </div>
+
+    <div class="calc rv" data-calc>
+      <div>
+        <p class="calc__label">Your clinic today</p>
+
+        <div class="ctl">
+          <div class="ctl__top">
+            <span class="ctl__name">Cycles per month</span>
+            <span class="ctl__val" data-val="cycles">60</span>
+          </div>
+          <input type="range" name="cycles" min="10" max="200" step="5" value="60" aria-label="Cycles per month">
+          <span class="ctl__note">Fresh and frozen, all cycle types</span>
+        </div>
+
+        <div class="ctl">
+          <div class="ctl__top">
+            <span class="ctl__name">Clerical hours per cycle</span>
+            <span class="ctl__val" data-val="clerical">6.0 h</span>
+          </div>
+          <input type="range" name="clerical" min="2" max="12" step="0.5" value="6" aria-label="Clerical hours per cycle">
+          <span class="ctl__note">Calendar building, retyping, consents, clearance, reconciliation</span>
+        </div>
+
+        <div class="ctl" style="margin-bottom:0">
+          <div class="ctl__top">
+            <span class="ctl__name">Revenue per cycle</span>
+            <span class="ctl__val" data-val="price">$18k</span>
+          </div>
+          <input type="range" name="price" min="4000" max="40000" step="1000" value="18000" aria-label="Revenue per cycle">
+          <span class="ctl__note">Your own average, not a market figure</span>
+        </div>
+      </div>
+
+      <div class="calc__out">
+        <p class="calc__label">On the headcount you have today</p>
+        <dl class="calc__result">
+          <div>
+            <dt>Coordinator hours returned per month</dt>
+            <dd class="is-sol" data-out="hours">198</dd>
+          </div>
+          <div>
+            <dt>Cycle headroom, same payroll</dt>
+            <dd data-out="headroom">+33<small>Cycles a month the returned hours can carry before you hire again.</small></dd>
+          </div>
+          <div>
+            <dt>New monthly ceiling</dt>
+            <dd data-out="ceiling">93</dd>
+          </div>
+          <div>
+            <dt>Revenue that headroom represents</dt>
+            <dd data-out="revenue">$594k<small>Per month, at your cycle price, if you fill it.</small></dd>
+          </div>
+        </dl>
+        <p class="calc__foot">Model: one record removes <b>55%</b> of the clerical hours a cycle costs today — the retyping, the hand-built calendar, the consent chase, the month-end reconciliation. Returned hours are then spent on cycles at your own clerical rate. <b>It is a model, not a measurement</b>, and on the call we run it against your real figures. If it doesn't clear, we'll tell you and you shouldn't buy it.</p>
+      </div>
+    </div>
+
+    <div class="btn-row rv">
+      <a class="btn btn--ghost" href="capacity.html">See the full capacity case →</a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ WHAT IT IS ============ -->
 <section class="band band--surface band--edge" id="inside">
   <div class="wrap">
     <div class="band__head rv">
       <p class="eyebrow">One system</p>
       <h2>Five systems your clinic pays for separately. One record.</h2>
-      <p class="lede">A fertility clinic normally buys an EHR, a lab system, a CRM, a billing platform and a portal, then pays someone to make them talk. Solux is all five as one database. The lead, the chart, the embryo and the invoice are the same record.</p>
+      <p class="lede">A fertility clinic normally buys an EHR, a lab system, a CRM, a billing platform and a portal, then pays someone to make them talk. Solux is all five as one database.</p>
     </div>
 
     <div class="tiles rv">
@@ -139,7 +305,7 @@
       <article>
         <span class="cap__n">02 · The cycle calendar</span>
         <h3>Generated from a single date</h3>
-        <p>Birth control, stim, monitoring, trigger, retrieval, transfer — protocol-aware, from one date. Your patient reads the identical schedule in her portal, character for character.</p>
+        <p>Birth control, stim, monitoring, trigger, retrieval, transfer — protocol-aware, from one date. The hour a coordinator used to spend building it, per cycle, is gone.</p>
         <div class="shot shot--mini"><span class="shot__tag">Shown above</span><p class="shot__desc">The generated cycle track, live in the hero.</p></div>
       </article>
       <article>
@@ -170,51 +336,17 @@
   </div>
 </section>
 
-<!-- ============ THE SEAMS ============ -->
-<section class="band band--surface band--edge">
-  <div class="wrap">
-    <div class="band__head rv">
-      <p class="eyebrow">Why one database</p>
-      <h2>Cycles aren't lost because someone is bad at their job. They're lost in the handoffs.</h2>
-      <p class="lede">Every handoff between systems is a human retyping something while already behind. An assistant bolted onto any one of those systems is blind to the other three.</p>
-    </div>
-
-    <div class="grid grid--4 rv">
-      <div class="card">
-        <span class="mono">Seam 01</span>
-        <h3>Lead → chart</h3>
-        <p>Your CRM knows she inquired. Your EHR knows she exists. Neither knows she went quiet nine days ago and is about to book somewhere else.</p>
-      </div>
-      <div class="card">
-        <span class="mono">Seam 02</span>
-        <h3>Chart → lab</h3>
-        <p>The clinical record says retrieval happened. The embryology record — the one that actually matters in five years — lives in a spreadsheet on someone's desktop.</p>
-      </div>
-      <div class="card">
-        <span class="mono">Seam 03</span>
-        <h3>Nurse → patient</h3>
-        <p>The cycle calendar is built by hand, then retyped into an email. Two versions of the truth, and the patient is holding one of them.</p>
-      </div>
-      <div class="card">
-        <span class="mono">Seam 04</span>
-        <h3>Clinic → ledger</h3>
-        <p>Month end becomes a reconciliation between systems that were never meant to agree, run by the person you can least afford to lose.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ THE AI ============ -->
-<section class="band band--surface band--edge" id="ai">
+<section class="band band--ink" id="ai">
   <div class="wrap">
     <div class="band__head rv">
-      <p class="eyebrow">AI, with a receipt</p>
-      <h2>Every question your clinic asks the AI is logged. Ask a vendor to show you that screen.</h2>
-      <p class="lede">The chat window is the easy half. The hard half is a model that reads the live clinical database, is structurally prevented from returning a row the person asking couldn't open themselves, and leaves a trail your compliance officer would accept. That's a decision about the database, made on day one.</p>
+      <p class="eyebrow">Why the capacity is real</p>
+      <h2>The AI does the coordination work. It can only do that because it reads the whole record.</h2>
+      <p class="lede">An assistant bolted onto any one of five systems is blind to the other four, so it can advise but it cannot take work off anyone. Solux's AI reads the live clinical database under the asking person's own permissions, is structurally prevented from returning a row they couldn't open themselves, and logs every question. That is a decision about the database, made on day one.</p>
     </div>
 
-    <!-- SIGNATURE 2: the audit trace, full width -->
-    <div class="audit rv" data-execute>
+    <!-- SIGNATURE 2: the audit trace -->
+    <div class="audit audit--lead rv" data-execute>
       <div class="audit__bar"><i></i> ai_query_audit — <span data-audit-status>live</span></div>
       <dl class="audit__rows">
         <div class="audit__row"><dt>Asked by</dt><dd>Medical director · signed in</dd></div>
@@ -225,7 +357,7 @@
         <div class="audit__row"><dt>Returned</dt><dd>6 rows · 340&nbsp;ms</dd></div>
         <div class="audit__row"><dt>Written to</dt><dd><b>ai_query_audit</b> — user, clinic, query text, status, rows, duration</dd></div>
       </dl>
-      <div class="audit__foot">Every question your clinic asks leaves a record. <b>That is the difference</b> between AI you can deploy in healthcare and AI you can't.</div>
+      <div class="audit__foot">Every question your clinic asks leaves a record. <b>That is the difference</b> between AI you can deploy in healthcare and AI you can't. Ask a vendor to show you that screen.</div>
     </div>
 
     <ul class="chips rv" aria-label="AI constraints">
@@ -235,19 +367,20 @@
       <li>Never trained on your patient data.</li>
     </ul>
 
-    <!-- Real product shot: AI Tools → "Ask AI About Patient Data" (PHI-free).
-         Drop the capture at assets/shots/ai-query.png — see SCREENSHOT-GUIDE.md -->
-    <figure class="frame rv" style="margin-top:clamp(28px,3.5vw,40px)">
-      <div class="frame__bar"><span class="frame__dots"><i></i><i></i><i></i></span><span class="frame__url">solux · ask ai about patient data</span></div>
-      <div class="frame__body">
-        <img src="assets/shots/ai-query.png" alt="The Solux assistant answering a natural-language question about the clinic's live data.">
-        <div class="frame__await" hidden>
-          <span class="shot__tag">Screenshot</span>
-          <p>The actual "Ask AI About Patient Data" screen, framed here. Capture PHI-free (an aggregate question like "how many patients are in monitoring?").</p>
-          <span class="frame__cap">assets/shots/ai-query.png</span>
-        </div>
-      </div>
-    </figure>
+    <!-- NEW: ask the database -->
+    <div class="band__head rv" style="margin-top:clamp(44px,5.5vw,68px);margin-bottom:clamp(20px,2.6vw,30px)">
+      <p class="eyebrow">Try the part nobody else will show you</p>
+      <h2 style="font-size:clamp(1.6rem,3.2vw,2.3rem)">Pick a question. Watch it become SQL against a live record.</h2>
+    </div>
+
+    <div class="askdemo rv" data-askdemo>
+      <div class="askdemo__bar"><span>Ask AI about clinic data — <span data-ask-state>ready</span></span><span><b>Synthetic instance</b> · no real patient data</span></div>
+      <div class="askdemo__qs"></div>
+      <div class="askdemo__sql"></div>
+      <div class="askdemo__rows"></div>
+      <div class="askdemo__foot"><span data-ask-meta>…</span><span><b>Written to</b> ai_query_audit</span></div>
+    </div>
+    <p class="risk__src rv" style="margin-top:14px">A demonstration on a synthetic instance. On the call you type the questions yourself, against a live clinic, and that part is not scripted.</p>
 
     <div class="band__head rv" style="margin-top:clamp(48px,6vw,72px);margin-bottom:clamp(24px,3vw,34px)">
       <p class="eyebrow">Four places it's load-bearing</p>
@@ -258,7 +391,7 @@
       <div class="card">
         <span class="mono">It writes</span>
         <h3>It writes the cycle calendar</h3>
-        <p>The full protocol, generated from one date and refused outright when a scheduling rule or provider availability would make it wrong. A nurse used to do this by hand.</p>
+        <p>The full protocol, generated from one date and refused outright when a scheduling rule or provider availability would make it wrong. A nurse used to do this by hand, per patient.</p>
       </div>
       <div class="card">
         <span class="mono">It reads</span>
@@ -325,50 +458,25 @@
   </div>
 </section>
 
-<!-- ============ FOR YOUR LAB ============ -->
-<section class="band band--ink">
+<!-- ============ FOR YOUR LAB — capacity's proof ============ -->
+<section class="band band--surface band--edge">
   <div class="wrap">
     <div class="band__head rv">
-      <p class="eyebrow">Embryology</p>
-      <h2>The record someone will ask you about in five years usually lives in a spreadsheet.</h2>
-      <p class="lede">Most fertility EHRs stop at the chart. The embryology record — the one that matters at the exact moment it matters most — gets kept in Excel by the person you can least afford to lose. In Solux the lab record <em>is</em> the record.</p>
+      <p class="eyebrow">Where the claim gets tested</p>
+      <h2>Any vendor can promise you scale. Ask them to open the embryology record.</h2>
+      <p class="lede">Volume is only safe if the lab scales with it. Most fertility EHRs stop at the chart, and the record someone will ask you about in five years is kept in Excel by the person you can least afford to lose. In Solux the lab record <em>is</em> the record — which is why the capacity claim survives an audit.</p>
     </div>
 
-    <div class="band__head rv" style="max-width:none;margin-bottom:clamp(20px,2.5vw,28px)">
-      <p class="eyebrow" style="color:var(--sol)">Why the laboratory is where the risk lives</p>
-    </div>
-    <div class="riskband rv" role="list">
-      <div role="listitem"><span class="risk__n">38%</span><span class="risk__c">of paid fertility claims begin in the lab</span></div>
-      <div role="listitem"><span class="risk__n">$199,188</span><span class="risk__c">average settlement on embryo-related claims</span></div>
-      <div role="listitem"><span class="risk__n">$15M</span><span class="risk__c">single award after one cryo tank failure</span></div>
-      <div role="listitem"><span class="risk__n">~$27,000</span><span class="risk__c">cost of producing one live birth at age 30</span></div>
-    </div>
-    <p class="risk__src rv">Sources: Letterie &amp; Fox, J Assist Reprod Genet 2017 (184,015 cycles) · Pacific Fertility Center verdict · Human Reproduction 2024.</p>
-
-    <div class="band__head rv" style="max-width:none;margin:clamp(36px,4.5vw,52px) 0 clamp(18px,2.2vw,26px)">
-      <h2 style="font-size:clamp(1.5rem,3vw,2.1rem)">So the lab record is built like the risk is real.</h2>
-    </div>
-
-    <div class="grid grid--2 rv" style="margin-bottom:clamp(28px,3.5vw,40px)">
+    <div class="grid grid--2 rv" style="margin-bottom:clamp(26px,3.2vw,38px)">
       <div class="card">
         <span class="mono">Traceability</span>
         <h3>Every straw findable to the slot</h3>
         <p>Tank, canister, cane, position. "Where is that straw" is one click, not an afternoon.</p>
       </div>
       <div class="card">
-        <span class="mono">Genetics</span>
-        <h3>PGT against the embryo</h3>
-        <p>Held on the individual embryo, next to the grade and the time-lapse viability score.</p>
-      </div>
-      <div class="card">
         <span class="mono">Witnessing</span>
         <h3>A second name, enforced</h3>
-        <p>Every handling step carries a witness the system requires — not a policy on a wall.</p>
-      </div>
-      <div class="card">
-        <span class="mono">Recall</span>
-        <h3>Both directions, no binder</h3>
-        <p>Which cases used this lot, and which lots touched this case — each a query, not a search.</p>
+        <p>Every handling step carries a witness the system requires — not a policy on a wall. It holds at 60 cycles and at 120.</p>
       </div>
     </div>
 
@@ -409,46 +517,46 @@
     </figure>
 
     <div class="btn-row rv">
-      <a class="btn btn--sol" href="contact.html">Show this to your lab director →</a>
+      <a class="btn btn--ghost" href="lab.html">The lab director's page →</a>
     </div>
   </div>
 </section>
 
 <!-- ============ WHAT CHANGES (roles) ============ -->
-<section class="band band--surface band--edge">
+<section class="band band--surface">
   <div class="wrap">
     <div class="band__head rv">
       <p class="eyebrow">What changes</p>
-      <h2>Four people in the room. Four different versions of the same relief.</h2>
+      <h2>Four people in the room. One of them is counting hours.</h2>
     </div>
 
     <div class="grid grid--2 rv">
       <div class="role">
         <h3>Owner / operator</h3>
         <p>Sixty cycles a month becomes a hundred and twenty on the coordinators already on payroll — and four systems that never talked stop showing up as four invoices.</p>
-        <span class="mono">Scale without headcount</span>
+        <span class="role__gain">Growth stops costing headcount</span>
       </div>
       <div class="role">
         <h3>Medical director</h3>
         <p>Sixty patients stimulating. He opens four charts, because the system told him which four.</p>
-        <span class="mono">Cohort view, not chart-by-chart</span>
+        <span class="role__gain">Cohort view, not chart-by-chart</span>
       </div>
       <div class="role">
         <h3>Lab director</h3>
         <p>Every straw is findable to the physical slot, every handling step has a second name on it, and the real record stops living in a spreadsheet.</p>
-        <span class="mono">The lab record becomes the record</span>
+        <span class="role__gain">The lab record becomes the record</span>
       </div>
       <div class="role">
         <h3>Finance</h3>
         <p>Money is collected before the cycle starts, and the clinical record and the ledger are the same record. There is nothing to reconcile.</p>
-        <span class="mono">One ledger, no month-end archaeology</span>
+        <span class="role__gain">No month-end archaeology</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============ STACK REPLACED ============ -->
-<section class="band band--surface">
+<section class="band band--surface band--edge">
   <div class="wrap">
     <div class="band__head rv">
       <p class="eyebrow">What you're actually buying</p>
@@ -549,6 +657,11 @@
           <td class="col-us">Staged import with a review step before anything lands in a chart</td>
         </tr>
         <tr>
+          <th scope="row">Staff added to absorb it</th>
+          <td class="col-them">Coordinators hired to feed the new system alongside the old one</td>
+          <td class="col-us">None. The clerical work leaves with the handoffs</td>
+        </tr>
+        <tr>
           <th scope="row">AI capability</th>
           <td class="col-them">A roadmap item, or a chat widget over a knowledge base</td>
           <td class="col-us">Live on day one, because it was built into the data model</td>
@@ -561,13 +674,12 @@
       </tbody>
     </table>
 
-    <!-- Real product shot: the go-live / readiness checklist (structurally PHI-free).
-         Drop the capture at assets/shots/go-live.png — see SCREENSHOT-GUIDE.md -->
     <figure class="frame rv" style="margin-top:clamp(24px,3vw,36px)">
       <div class="frame__bar"><span class="frame__dots"><i></i><i></i><i></i></span><span class="frame__url">solux · go-live readiness</span></div>
       <div class="frame__body">
-        <img src="assets/shots/go-live.png" alt="The go-live readiness checklist with configuration items marked blocker, important or optional.">
-        <div class="frame__await" hidden>
+        <!-- Drop the capture at assets/shots/go-live.png and restore this img:
+             <img src="assets/shots/go-live.png" alt="The go-live readiness checklist with configuration items marked blocker, important or optional."> -->
+        <div class="frame__await">
           <span class="shot__tag">Screenshot</span>
           <p>The go-live checklist — configuration items, blockers red / amber / green. Turns the implementation promise into an artifact the buyer can watch fill in.</p>
           <span class="frame__cap">assets/shots/go-live.png</span>
@@ -631,7 +743,7 @@
       </div>
       <div>
         <p>Price this against a cycle, not against software. At a typical IVF cycle price, a single cycle you would otherwise have lost — to a lead that went quiet, a calendar that slipped, a patient who wasn't financially cleared in time — covers the platform for months.</p>
-        <p>On the call we run this with <em>your</em> numbers: your monthly inquiries, your conversion rate, your cycle price. Not ours. If the arithmetic doesn't clear on your own figures, we'll tell you and you shouldn't buy it.</p>
+        <p>And that is the floor, not the case. The case is the headroom: the cycles your current team could run if the clerical hours came back. <a href="capacity.html" style="color:var(--brand);text-decoration:underline">That page is here</a>, and on the call we run it with <em>your</em> numbers. If the arithmetic doesn't clear on your own figures, we'll tell you and you shouldn't buy it.</p>
       </div>
     </div>
   </div>
@@ -651,7 +763,7 @@
       <p class="deck" style="margin-top:1.3rem">Forty-five minutes. We ask about your cycles, your systems and your handoffs first, then show only the parts that answer what you told us — and at some point we hand you the keyboard and let you ask the AI anything about a live clinic. That part is not scripted.</p>
       <div class="btn-row">
         <a class="btn btn--sol" href="contact.html">Book a demo →</a>
-        <a class="btn btn--ghost" href="features.html">Read the feature detail</a>
+        <a class="btn btn--ghost" href="capacity.html">Read the capacity case</a>
       </div>
     </div>
   </div>
@@ -662,21 +774,22 @@
     <div class="foot__in">
       <div>
         <a class="brand" href="index.html"><img src="assets/brand/solux-mark.svg" alt=""><span class="brand__w">Solux</span></a>
-        <p style="max-width:32ch;margin:0">The fertility platform built inside a working clinic. Funnel, chart, embryology lab and ledger as one record — with AI built into the data model, not draped over it.</p>
+        <p style="max-width:32ch;margin:0">The fertility platform built inside a working clinic. Funnel, chart, embryology lab and ledger as one record — so cycle volume stops costing headcount.</p>
       </div>
       <div>
         <h5>Product</h5>
         <ul>
+          <li><a href="capacity.html">Capacity case</a></li>
+          <li><a href="lab.html">For your lab</a></li>
           <li><a href="features.html">Features</a></li>
           <li><a href="index.html#ai">The AI</a></li>
           <li><a href="index.html#offer">The offer</a></li>
-          <li><a href="contact.html">Book a demo</a></li>
         </ul>
       </div>
       <div>
         <h5>Company</h5>
         <ul>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Book a demo</a></li>
           <li><a href="es.html">Español</a></li>
           <li><a href="https://cimagrowth.com">Cima Growth Solutions</a></li>
         </ul>
@@ -687,5 +800,6 @@
 </footer>
 
 <script src="assets/site.js" defer></script>
+<script src="assets/site-v2.js" defer></script>
 </body>
 </html>
