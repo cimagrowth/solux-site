@@ -33,19 +33,19 @@
   "rewrites": [
     {
       "source": "/es/capacidad",
-      "destination": "/capacidad.html"
+      "destination": "/capacidad"
     },
     {
       "source": "/es/laboratorio",
-      "destination": "/laboratorio.html"
+      "destination": "/laboratorio"
     },
     {
       "source": "/es/funciones",
-      "destination": "/funciones.html"
+      "destination": "/funciones"
     },
     {
       "source": "/es/contacto",
-      "destination": "/contacto.html"
+      "destination": "/contacto"
     }
   ]
 }
