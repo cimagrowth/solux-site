@@ -121,7 +121,7 @@
       </div>
       <div>
         <dt>Time to value</dt>
-        <dd>Live in 60 days<small>Nothing left to build. Configuration against a 40-item checklist.</small></dd>
+        <dd>Live in 60 days<small>Nothing left to build. Configuration against a 37-item checklist.</small></dd>
       </div>
       <div class="trust--accent">
         <dt>Go-live guarantee</dt>
@@ -329,7 +329,7 @@
       <article style="justify-content:center;background:var(--paper)">
         <span class="cap__n">All of it</span>
         <h3>Twelve modules, one login</h3>
-        <p>Every module, every field, on your own private instance.</p>
+        <p>Every module, every field, in one record, walled off from every other clinic.</p>
         <div class="btn-row" style="margin-top:18px"><a class="btn btn--ghost" href="features.html">See the full feature detail →</a></div>
       </article>
     </div>
@@ -575,7 +575,7 @@
       <li><span class="n">08</span><span class="what">Inventory with lot-to-case traceability<em>Answers both recall questions: which cases used this lot, and which lots touched this case.</em></span><span class="alt">Inventory system</span></li>
       <li><span class="n">09</span><span class="what">Workforce compliance<em>Credentials and competencies with expiry dates, and the report you assemble the night before an inspection.</em></span><span class="alt">A spreadsheet and some risk</span></li>
       <li><span class="n">10</span><span class="what">Integrations already built<em>Witnessing, time-lapse incubation, PACS imaging, HL7 lab interfaces, payments, e-fax, label printing.</em></span><span class="alt">An engineer, per interface</span></li>
-      <li><span class="n">11</span><span class="what">Your own isolated instance<em>Own database, own storage, own domain. Isolation is the architecture, not a filter on a shared table.</em></span><span class="alt">Not sold anywhere else</span></li>
+      <li><span class="n">11</span><span class="what">Your clinic's data, walled off<em>Every table carries row-level security keyed to your clinic, enforced by the database itself, not by application code. Your own domain and branding.</em></span><span class="alt">Not sold anywhere else</span></li>
       <li><span class="n">12</span><span class="what">Tamper-evident audit chain<em>Every record change hash-chained, plus a technical due-diligence pack you can hand to your own counsel.</em></span><span class="alt">Security consulting</span></li>
     </ol>
 
@@ -600,8 +600,8 @@
       </div>
       <div class="card">
         <span class="mono">Proof 02</span>
-        <h3>Your instance is physically yours</h3>
-        <p>Separate database, separate storage, separate domain. There is no query anyone can write that reaches your patients from another clinic, because there is no shared table to write it against.</p>
+        <h3>Your data is walled off at the database</h3>
+        <p>Every table has row-level security tied to your clinic, enforced by Postgres on every query, including queries from the AI assistant. Staff from another clinic get zero rows, not a filtered screen.</p>
       </div>
       <div class="card">
         <span class="mono">Proof 03</span>
@@ -611,12 +611,12 @@
       <div class="card">
         <span class="mono">Proof 04</span>
         <h3>Isolation is tested, not asserted</h3>
-        <p>An automated probe counts how many rows from other clinics are visible to a signed-in user. Anything other than zero fails the build. A second probe blocks any view that could bypass row-level security.</p>
+        <p>Built-in isolation tests seed a second clinic and count how many of its rows a signed-in user can see. The only passing answer is zero. Views and functions that could bypass row-level security are reviewed and locked down.</p>
       </div>
       <div class="card">
         <span class="mono">Proof 05</span>
         <h3>Go-live is a gate, not a feeling</h3>
-        <p>A live screen tracks 40 configuration items across identity, scheduling, clinical, embryology, billing, CRM, payments, lab QC, inventory and integrations — each marked blocker, important or optional. All blockers green, you go live.</p>
+        <p>A live screen tracks 37 configuration items across identity, scheduling, clinical, embryology, billing, CRM, payments, lab QC, inventory and integrations — each marked blocker, important or optional. All blockers green, you go live.</p>
       </div>
       <div class="card">
         <span class="mono">Proof 06</span>
@@ -642,14 +642,14 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">Instance stood up</th>
+          <th scope="row">Clinic set up</th>
           <td class="col-them">Months of tenant provisioning, contracts and sequencing</td>
-          <td class="col-us">Days — cloned and deployed from one versioned template</td>
+          <td class="col-us">Days — your clinic is created on the platform from one versioned template</td>
         </tr>
         <tr>
           <th scope="row">Configuration</th>
           <td class="col-them">A bespoke consulting engagement, priced by the hour</td>
-          <td class="col-us">A 40-item checklist, screen by screen, run by us</td>
+          <td class="col-us">A 37-item checklist, screen by screen, run by us</td>
         </tr>
         <tr>
           <th scope="row">Data migration</th>
@@ -695,13 +695,13 @@
     <div class="offer rv">
       <p class="eyebrow">The offer</p>
       <h2>The 60-Day Cycle Capacity Install</h2>
-      <p class="deck" style="max-width:52ch;margin-top:1.2rem">For fertility clinics scaling past 50 cycles a month. Your own isolated fertility EHR, CRM, embryology lab system and billing ledger — live in 60 days, on the headcount you have today.</p>
+      <p class="deck" style="max-width:52ch;margin-top:1.2rem">For fertility clinics scaling past 50 cycles a month. A fertility EHR, CRM, embryology lab system and billing ledger in one record, walled off for your clinic — live in 60 days, on the headcount you have today.</p>
 
       <ul class="checks">
-        <li>Your own private instance, provisioned and deployed</li>
+        <li>Your clinic set up on Solux, on your own domain</li>
         <li>All twelve modules and every AI surface on from day one</li>
         <li>Structured data migration with a review step</li>
-        <li>Configuration run against the 40-item go-live checklist</li>
+        <li>Configuration run against the 37-item go-live checklist</li>
         <li>Your clinic's assistant configured to your voice and knowledge</li>
         <li>Staff training by role, not one long generic session</li>
         <li>Integrations connected as your vendor credentials land</li>
