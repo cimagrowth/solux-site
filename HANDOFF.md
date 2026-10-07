@@ -134,3 +134,13 @@ this block will read as drift to the next person who opens the repo.
    place needs no code change.
 4. **Nav crowding.** Capacity and For-your-lab hide below 980px via `.hide-md`.
    If you want them in a mobile menu, that markup does not exist yet.
+
+## Demo booking
+
+Every "Book a demo" / "Solicitar demo" CTA (header button on every page, hero
+and closing CTAs, post-calculator CTAs, footers) links straight to the booking
+calendar: `https://go.soluxehr.com/book/solux-fertility/solux-demo`. To change
+it, find-and-replace that URL across `*.html`.
+
+`contact.html` / `contacto.html` lead with a booking button; the GrowthOS form
+(`e979fa79-…`) stays below it as the general "send us a question" contact form.
